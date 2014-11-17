@@ -21,6 +21,7 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,7 +31,19 @@
   </head>
 
   <body>
+    <script type="text/javascript">
+        $.ajax({
+          url: 'http://127.0.0.1:8000/',
+          type: "POST",
+          dataType: 'jsonp',
+          jsonp: "callback",
+          success: function(data) {
+            alert(data)
+              $('#test').html(data);
+          },
 
+        })
+    </script>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -52,8 +65,9 @@
                 <li><a href="mom.html">Мама</a></li>
               </ul>
             </li>
+            <li><a href="2048/index.html">2048</a></li>
           </ul>
-          <a class="navbar-brand navbar-right" href="https://github.com/comalex/comalex.github.io">Завдання інтерент програмування</a>
+          <a class="navbar-brand navbar-right" id='test' href="https://github.com/comalex/comalex.github.io">Завдання інтерент програмування</a>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
