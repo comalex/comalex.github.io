@@ -69,8 +69,12 @@
                   <input type='submit' id='sub'>
                   <p>Відповідь: <span id='result'></span>см.</p>
                   <script type="text/javascript">
+                    $('#result').click(function() {
+
+
                     var x = $('#a').val();
                     var h = $('#b').val();
+
                      l = a*2;
                      l_t = 0 + l;
                      while (h >= x) {
@@ -80,6 +84,7 @@
                      }
                     var result = l_t/100;
                     $('#result').val(result);
+                  });
                   </script>
               </div>
           </div>
