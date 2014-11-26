@@ -70,20 +70,17 @@
                   <p>Відповідь: <span id='result'></span>см.</p>
                   <script type="text/javascript">
                     $('#result').click(function() {
-
-
-                    var x = $('#a').val();
-                    var h = $('#b').val();
-
-                     l = a*2;
-                     l_t = 0 + l;
-                     while (h >= x) {
-                        count_cub = h/x;
-                        l_t += (count_cub * 2) * x
-                        h -= x;
-                     }
-                    var result = l_t/100;
-                    $('#result').val(result);
+                      var x = $('#a').val();
+                      var h = $('#b').val();
+                       l = a*2;
+                       l_t = 0 + l;
+                       while (h >= x) {
+                          count_cub = h/x;
+                          l_t += (count_cub * 2) * x
+                          h -= x;
+                       }
+                      var result = l_t/100;
+                      $('#result').html(result);
                   });
                   </script>
               </div>
