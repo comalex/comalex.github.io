@@ -70,8 +70,8 @@
                   <p>Відповідь: <span id='result'></span>см.</p>
                   <script type="text/javascript">
                     $('#sub').click(function() {
-                      var x = $('#a').val();
-                      var h = $('#b').val();
+                      var x = parseFloat($('#a').val());
+                      var h = parseFloat($('#b').val());
                        l = a*2;
                        l_t = 0 + l;
                        while (h >= x) {
