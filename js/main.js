@@ -6,9 +6,13 @@ $('.navbar li a').click(function(event) {
     scrollBy(0, -offset);
 });
 jQuery('.gal').colorbox({
-    rel: 'gal', href: function () {
-        return $(this).prop('src');
+    rel: 'gal',
+    href: function () {
+        var path = $(this).prop('src').split('/');
+        path[path.length-2] = 'big'
+        console.log(path)
+        return path.join('/');
     },
     maxWidth: '100%',
     maxHeight: '100%',
-    });
+});
