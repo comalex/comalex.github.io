@@ -18,6 +18,10 @@ dd {
 li {
     list-style: outside none none;
 }
+.label {
+    white-space: normal;
+    line-height: 2.2em
+}
 .contacts {
     font-size: 1.2em;
 }
@@ -40,6 +44,9 @@ li {
 .skill-b {font-size: 13px;}
 .work-list li:nth-child(2n+1){
     background-color: #F3F3F3;
+}
+.many-image > div {
+    margin-bottom: 5px;
 }
 .project-list-min {
     text-align: center;
