@@ -22,7 +22,7 @@ li.contactsi {
     white-space: normal;
     line-height: 2.2em
 }
-    .label .label-info {
+    .label.label-info {
         cursor: help;
     }
 .contacts {
