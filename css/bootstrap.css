@@ -1,0 +1,12 @@
+strong {
+  font-weight: bold;
+}
+
+
+.accordion h1 {
+    border: 1px solid black;
+    background: #F5F5F5;
+    padding: 10px;
+    cursor: pointer;
+    font-size: inherit;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  <script src="{{ "/js/jquery.1.11.1.min.js" | prepend: site.baseurl }}"></script>
+
+  <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
+
+  <style>
+    @media only screen and (min-device-width: 0px) and (max-device-width: 720px) {.hidden-xs {visibility:hidden;}}
+    nav.left {
+      position: fixed;
+    }
+    nav.right {
+      overflow: hidden;
+      position: fixed;
+      right: 30px;
+      width: 240px;
+    }
+    .bottom {
+      bottom: 10px;
+    }
+    h1 em {
+      color: green;
+    }
+  </style>
+  <nav class='left hidden-xs'>
+    <ul></ul>
+  </nav>
+  <nav class='right hidden-xs'>
+    <ul></ul>
+  </nav>
+  <nav class='right bottom hidden-xs'>
+    <ul></ul>
+  </nav>
+  <body>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <dl class="accordion">
+          {{ content | unindent | markdownify }}
+        </dl>
+      </div>
+    </div>
+
+     <script type="text/javascript">
+
+         (function($) {
+          $('.accordion h2').each(function(){
+            var item = "<li><a href='#"+ $(this).attr('id') +"'>"+$(this).html()+"</a></li>";
+            $('nav.left ul').append(item)
+          });
+          $('.accordion h1 strong').each(function(){
+            var $h1 = $(this).closest('h1');
+            var item = "<li><a href='#"+ $h1.attr('id') +"'>"+$h1.html()+"</a></li>";
+            $('nav.right:not(.bottom) ul').append(item)
+          });
+          $('.accordion h1 em').each(function(){
+            var $h1 = $(this).closest('h1');
+            var item = "<li><a href='#"+ $h1.attr('id') +"'>"+$h1.html()+"</a></li>";
+            $('nav.right.bottom ul').append(item)
+          });
+          var allPanels = $('.accordion > ul').hide();
+        $('.accordion > h1').click(function() {
+          allPanels.hide();
+          var $next = $(this).next();
+          if ($(this).data("slided")){
+            $(this).data("slided", false);
+          } else {
+            $next.show();
+            $('*').data("slided", false);
+            $(this).data("slided", true);
+          }
+          return false;
+        });
+
+      })(jQuery);
+    </script>
+
+  </body>
+
+</html>

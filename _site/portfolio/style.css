@@ -1,0 +1,62 @@
+body {
+    padding-top: 60px;
+}
+
+img {
+    cursor: pointer;
+}
+dl {
+    font-size: 1.2em;
+}
+dt {
+    margin-left: 5px;
+    width: 10px;
+}
+dd {
+    padding-right: 5px;
+}
+li.contactsi {
+    list-style: outside none none;
+}
+.label {
+    white-space: normal;
+    line-height: 2.2em
+}
+    .label.label-info {
+        cursor: help;
+    }
+.contacts {
+    font-size: 1.2em;
+}
+.contacts i {
+    margin-right: 20px;
+}
+.info-project {
+    background-color: #F7F7F9;
+    padding: 15px;
+    margin-top: 13px;
+}
+.panel-heading {
+    padding: 2px 15px;
+    margin-bottom: 10px;
+}
+.proj-name {
+    padding-left: 10px;
+}
+.skill-a {font-size: 17px;}
+.skill-b {font-size: 13px;}
+.work-list li:nth-child(2n+1){
+    background-color: #F3F3F3;
+}
+.many-image > div {
+    margin-bottom: 5px;
+}
+.project-list-min {
+    text-align: center;
+}
+    .project-list-min .well {
+        margin: 15px;
+    }
+    .project-list-min .text-muted {
+        margin-top: 5px;
+    }
